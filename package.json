@@ -4,7 +4,7 @@
   "description": "Application",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon src/index.js --exec babel-node"
   },
   "author": "jhon, valentina y juan",
   "license": "MIT",
