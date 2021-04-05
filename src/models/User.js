@@ -24,7 +24,7 @@ const userSchema = new Schema ({
     Telefono: {
         type: Number
     },
-    contraseña: {
+    contrasena: {
         type: String
     }
     

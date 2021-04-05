@@ -7,7 +7,7 @@ nombre:
 IdTipo:   
 IdNumero: 
 Telefono:  
-contraseña:  */
+contrasena:  */
 
 export const findAllUsers= async(req, res) => {
    try {
@@ -27,7 +27,7 @@ export const createUser=async(req, res)=>{
                 IdTipo: req.body.IdTipo,
                 IdNumero: req.body.IdNumero,
                 Telefono:  req.body.Telefono,
-                contraseña: req.body.contraseña
+                contrasena: req.body.contraseña
             });
         const UserSaved = await newUser.save();
         res.json(UserSaved)
@@ -58,7 +58,7 @@ export const deleteUser = async (req, res) => {
     try {
         const data = await User.findByIdAndDelete(req.params.id)
         res.json({
-        message: `${data.username} La tarea se elimino con exito`
+        message: `${data.username} el usuario se elimino con exito`
     });
     } catch (error) {
         console.log(error)
