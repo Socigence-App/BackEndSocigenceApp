@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 (async() => {
     try {
-        const db = await mongoose.connect('mongodb://localhost/socigenceapi',{
+        const db = await mongoose.connect('mongodb+srv://jhballen:jhon123@cluster0.gvnch.mongodb.net/SOCIGENCE-APP?retryWrites=true&w=majority',{
        useNewUrlParser: true,
        useUnifiedTopology: true, 
        useFindAndModify: true
