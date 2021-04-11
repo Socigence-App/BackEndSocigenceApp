@@ -26,7 +26,11 @@ const userSchema = new Schema ({
     },
     contrasena: {
         type: String
+    },
+    usertipo: {
+        type: String
     }
+    
     
 },{
     versionKey:false,
