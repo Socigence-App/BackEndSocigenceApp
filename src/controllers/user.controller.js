@@ -27,7 +27,7 @@ export const createUser=async(req, res)=>{
                 IdTipo: req.body.IdTipo,
                 IdNumero: req.body.IdNumero,
                 Telefono:  req.body.Telefono,
-                contrasena: req.body.contraseña
+                contrasena: req.body.contrasena
             });
         const UserSaved = await newUser.save();
         res.json(UserSaved)
