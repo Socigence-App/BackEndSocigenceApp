@@ -7,6 +7,7 @@ import userRouter from './routes/user.route'
 import categoriaRoute from './routes/categoria.route'
 import postRouter from './routes/post.route'
 import retoRouter from './routes/reto.route'
+import recompensaRouter from './routes/recompensa.route'
 
 
 const app = express()
@@ -16,7 +17,7 @@ app.set('port', process.env.PORT || 3000)
 
 app.use(cors());
 app.use(morgan('dev'));
-app.use(express.json());
+app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({extend: false}));
 
 //routes
@@ -28,5 +29,6 @@ app.use('/user', userRouter)
 app.use('/categoria', categoriaRoute)
 app.use('/post', postRouter)
 app.use('/reto', retoRouter)
+app.use('/recom',recompensaRouter)
 
 export default app;
